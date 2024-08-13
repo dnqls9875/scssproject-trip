@@ -163,7 +163,17 @@ html {
 
 body {
   font-size: 1rem;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR", "Poppins", sans-serif;
+}
+
+.login-button {
+  display: flex;
+  padding: 1.5rem 0;
+  border-radius: 7rem;
+  background: #006eff;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .a11y-hidden {
@@ -181,6 +191,26 @@ body {
 
 .mx16 {
   margin-inline: 1.6rem;
+}
+
+.login-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  padding-top: 7.58rem;
+  padding-inline: 2.5rem;
+}
+.login-wrap__bottom {
+  font-family: Poppins;
+}
+
+.login-wrap__bottom .title {
+  color: #091130;
+  font-family: Poppins;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
