@@ -1,0 +1,6 @@
+@use "../variable" as *;
+
+@mixin background($fileName, $coordinate: null, $bgColor: null, $bgSize: null) {
+  background: url(#{$imgurl}#{$fileName}) no-repeat $coordinate $bgColor;
+  background-size: $bgSize;
+}
