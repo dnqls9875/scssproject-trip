@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.login-button {
+  display: flex;
+  padding: rem(15) 0;
+  border-radius: rem(70);
+  background: $primary;
+  justify-content: center;
+  align-items: center;
+  gap: rem(10);
+}
