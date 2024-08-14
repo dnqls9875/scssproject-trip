@@ -9,3 +9,18 @@
   align-items: center;
   gap: rem(10);
 }
+
+.button-type1 {
+  width: 100%;
+  color: $white;
+  padding: rem(15) 0;
+  border-radius: rem(70);
+  background: $primary;
+  justify-self: start;
+  color: $white;
+  font-family: $eng;
+  font-size: rem(17);
+  font-weight: 600;
+  line-height: 96%;
+  text-align: center;
+}

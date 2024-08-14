@@ -4,13 +4,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: rem(60);
   padding-top: rem(75.8);
-  padding-inline: rem(25);
+  margin-inline: rem(25);
+
+  &__top {
+    margin: 0 auto;
+  }
 
   &__bottom {
-    font-family: Poppins;
+    display: grid;
+    gap: rem(20);
+    font-family: $eng;
   }
 }
 

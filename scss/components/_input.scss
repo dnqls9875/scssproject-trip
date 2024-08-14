@@ -1,0 +1,25 @@
+@use "../abstracts/" as *;
+
+.input-type1 {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+
+  label {
+    color: $gray90;
+    font-family: $eng;
+    font-size: rem(14.33);
+    font-weight: 500;
+  }
+  input {
+    display: flex;
+    padding: rem(15) rem(20);
+    border-radius: rem(10);
+    border: rem(1) solid $gray5c;
+    align-items: flex-start;
+    gap: rem(12);
+    color: $gray6a;
+    font-family: $eng;
+    font-size: rem(14.33);
+  }
+}
