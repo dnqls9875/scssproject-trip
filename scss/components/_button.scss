@@ -1,26 +1,22 @@
 @use "../abstracts/" as *;
 
-.login-button {
-  display: flex;
-  padding: rem(15) 0;
-  border-radius: rem(70);
-  background: $primary;
-  justify-content: center;
+.btn {
+  display: inline-flex;
   align-items: center;
-  gap: rem(10);
-}
+  justify-content: center;
 
-.button-type1 {
-  width: 100%;
-  color: $white;
-  padding: rem(15) 0;
-  border-radius: rem(70);
-  background: $primary;
-  justify-self: start;
-  color: $white;
-  font-family: $eng;
-  font-size: rem(17);
-  font-weight: 600;
-  line-height: 96%;
-  text-align: center;
+  &.base {
+    width: 100%;
+    font-family: $eng;
+    padding: rem(15) 0;
+    font-size: rem(17);
+    font-weight: 600;
+    line-height: 96%;
+    text-align: center;
+    border-radius: rem(70);
+  }
+  &.primary {
+    background: $primary;
+    color: $white;
+  }
 }

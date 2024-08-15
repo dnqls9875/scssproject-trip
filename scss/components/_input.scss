@@ -1,5 +1,14 @@
 @use "../abstracts/" as *;
 
+%inputIcon {
+  content: "";
+  display: inline-block;
+}
+%inputText {
+  color: $gray6a;
+  font-size: rem(14.33);
+}
+
 .input-type1 {
   display: flex;
   flex-direction: column;
@@ -7,15 +16,20 @@
 
   label {
     color: $gray90;
-    font-family: $eng;
     font-size: rem(14.33);
     font-weight: 500;
   }
   input {
+    @extend %inputText;
     border: none;
-    color: $gray6a;
-    font-family: $eng;
-    font-size: rem(14.33);
+  }
+  select {
+    @extend %inputText;
+    display: flex;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 }
 
@@ -33,11 +47,6 @@
   padding: rem(15) rem(20);
   border-radius: rem(10);
   border: rem(1) solid $gray5c;
-}
-
-%inputIcon {
-  content: "";
-  display: inline-block;
 }
 
 .username {
@@ -62,5 +71,42 @@
     @extend %inputIcon;
     width: rem(17.492);
     height: rem(14.16);
+  }
+}
+
+.notation {
+  display: flex;
+  gap: 0 rem(10);
+
+  &::after {
+    @extend %inputIcon;
+    border-right: 1px solid #6a6a6a;
+    height: rem(21);
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: rem(5);
+    color: $gray6a;
+    font-size: rem(14.33);
+    font-weight: 500;
+    white-space: nowrap;
+
+    &::after {
+      @include background("ico_arrow_down_01.svg", center);
+      @extend %inputIcon;
+      width: rem(8);
+      height: rem(4);
+    }
+  }
+}
+
+.email {
+  grid-template-columns: 1fr min-content;
+  &::after {
+    @include background("ico_arrow_down_02.svg", center);
+    @extend %inputIcon;
+    width: rem(24);
+    height: rem(24);
   }
 }
