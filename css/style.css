@@ -203,32 +203,76 @@ body {
   font-weight: 500;
 }
 .input-type1 input {
-  display: flex;
-  padding: 1.5rem 2rem;
-  border-radius: 1rem;
-  border: 0.1rem solid #5c5c5c;
-  align-items: flex-start;
-  gap: 1.2rem;
+  border: none;
   color: #6a6a6a;
   font-family: "Poppins", sans-serif;
   font-size: 1.433rem;
 }
 
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.input-wrap {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  border: 0.1rem solid #5c5c5c;
+}
+
+.password::after, .password::before, .username::before {
+  content: "";
+  display: inline-block;
+}
+
+.username::before {
+  background: url(../images/ico_user.svg) no-repeat center;
+  width: 1.73887rem;
+  height: 1.672rem;
+}
+
+.password {
+  grid-template-columns: min-content 1fr min-content;
+}
+.password::before {
+  background: url(../images/ico_key.svg) no-repeat center;
+  width: 1.839rem;
+  height: 1.839rem;
+}
+.password::after {
+  background: url(../images/ico_mark.svg) no-repeat center;
+  width: 1.7492rem;
+  height: 1.416rem;
+}
+
 .sns-wrap--continue::after, .sns-wrap--continue::before {
   content: "";
   display: inline-block;
-  width: 9.8rem;
+  width: 50%;
   height: 0.1rem;
 }
 
+.sns-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .sns-wrap--continue {
   display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
   color: #616161;
   font-family: "Poppins", sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
   text-align: center;
+  white-space: nowrap;
 }
 .sns-wrap--continue::before {
   background: linear-gradient(270deg, rgba(97, 97, 97, 0.75) 0%, rgba(97, 97, 97, 0) 94.39%);
@@ -236,6 +280,13 @@ body {
 .sns-wrap--continue::after {
   background: linear-gradient(90deg, rgba(97, 97, 97, 0.75) 0%, rgba(97, 97, 97, 0) 94.39%);
 }
+.sns-wrap--list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
 .a11y-hidden {
   overflow: hidden;
   position: absolute;
@@ -259,7 +310,6 @@ body {
   justify-content: center;
   gap: 6rem;
   padding-top: 7.58rem;
-  margin-inline: 2.5rem;
 }
 .login-wrap__top {
   margin: 0 auto;

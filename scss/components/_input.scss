@@ -12,14 +12,55 @@
     font-weight: 500;
   }
   input {
-    display: flex;
-    padding: rem(15) rem(20);
-    border-radius: rem(10);
-    border: rem(1) solid $gray5c;
-    align-items: flex-start;
-    gap: rem(12);
+    border: none;
     color: $gray6a;
     font-family: $eng;
     font-size: rem(14.33);
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+}
+
+.input-wrap {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  gap: rem(12);
+  padding: rem(15) rem(20);
+  border-radius: rem(10);
+  border: rem(1) solid $gray5c;
+}
+
+%inputIcon {
+  content: "";
+  display: inline-block;
+}
+
+.username {
+  &::before {
+    @include background("ico_user.svg", center);
+    @extend %inputIcon;
+    width: rem(17.3887);
+    height: rem(16.72);
+  }
+}
+
+.password {
+  grid-template-columns: min-content 1fr min-content;
+  &::before {
+    @include background("ico_key.svg", center);
+    @extend %inputIcon;
+    width: rem(18.39);
+    height: rem(18.39);
+  }
+  &::after {
+    @include background("ico_mark.svg", center);
+    @extend %inputIcon;
+    width: rem(17.492);
+    height: rem(14.16);
   }
 }
