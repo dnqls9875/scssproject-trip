@@ -4,18 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: rem(60);
-  padding-top: rem(75.8);
-
-  &__top {
-    margin: 0 auto;
-  }
-
-  &__bottom {
-    display: grid;
-    gap: rem(20);
-    font-family: $eng;
-  }
+  gap: rem(20);
 }
 
 .title {

@@ -210,10 +210,6 @@ body {
   height: 1.416rem;
 }
 
-.btn-type1 {
-  margin-top: 2rem;
-}
-
 .notation::after, .password::before, .username::before {
   content: "";
   display: inline-block;
@@ -227,7 +223,7 @@ body {
 .input-type1 {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 2rem;
 }
 .input-type1 label {
   color: #091130;
@@ -238,6 +234,7 @@ body {
   border: none;
   padding: 1.5rem 2rem 1.5rem 0;
 }
+
 .input-wrap {
   display: grid;
   overflow: hidden;
@@ -247,6 +244,12 @@ body {
   border-radius: 1rem;
   border: 0.1rem solid #5c5c5c;
   box-sizing: border-box;
+}
+
+.input-group1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .username {
@@ -292,6 +295,7 @@ body {
 .email .email-address {
   padding: 0 2rem;
 }
+
 .sns-wrap--continue::after, .sns-wrap--continue::before {
   content: "";
   display: inline-block;
@@ -341,10 +345,12 @@ body {
 
 .logo-type1 {
   padding-top: 7.58rem;
+  padding-bottom: 6rem;
 }
 
 .logo-type2 {
   padding-top: 1.38rem;
+  padding-bottom: 2.5rem;
 }
 
 .email-address select, .notation select {
@@ -434,16 +440,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 6rem;
-  padding-top: 7.58rem;
-}
-.login-wrap__top {
-  margin: 0 auto;
-}
-.login-wrap__bottom {
-  display: grid;
   gap: 2rem;
-  font-family: "Poppins", sans-serif;
 }
 
 .login-wrap__bottom .title {

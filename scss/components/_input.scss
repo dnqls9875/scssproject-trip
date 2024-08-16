@@ -12,7 +12,7 @@
 .input-type1 {
   display: flex;
   flex-direction: column;
-  gap: rem(12);
+  gap: rem(20);
 
   label {
     color: $gray90;
@@ -23,10 +23,6 @@
     @extend %inputText;
     border: none;
     padding: rem(15) rem(20) rem(15) 0;
-  }
-  select {
-    // @include background("ico_user.svg", center);
-    // appearance: none;
   }
 }
 
@@ -39,6 +35,11 @@
   border-radius: rem(10);
   border: rem(1) solid $gray5c;
   box-sizing: border-box;
+}
+.input-group1 {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
 }
 
 .username {
@@ -88,12 +89,5 @@
   }
   .email-address {
     padding: 0 rem(20);
-  }
-  // grid-template-columns: 1fr min-content;
-  &::after {
-    // @include background("ico_arrow_down_02.svg", center);
-    // @extend %inputIcon;
-    // width: rem(24);
-    // height: rem(24);
   }
 }

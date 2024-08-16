@@ -9,8 +9,10 @@
 .logo-type1 {
   @extend %logoAlign;
   padding-top: rem(75.8);
+  padding-bottom: rem(60);
 }
 .logo-type2 {
   @extend %logoAlign;
   padding-top: rem(13.8);
+  padding-bottom: rem(25);
 }
