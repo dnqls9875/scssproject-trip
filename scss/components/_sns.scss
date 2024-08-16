@@ -7,6 +7,10 @@
   height: rem(1);
 }
 
+.sns-type1 {
+  margin-top: rem(30);
+}
+
 .sns-wrap {
   display: flex;
   flex-direction: column;
@@ -25,11 +29,19 @@
     white-space: nowrap;
 
     &::before {
-      background: linear-gradient(270deg, rgba(97, 97, 97, 0.75) 0%, rgba(97, 97, 97, 0) 94.39%);
+      background: linear-gradient(
+        270deg,
+        rgba(97, 97, 97, 0.75) 0%,
+        rgba(97, 97, 97, 0) 94.39%
+      );
       @extend %snsBorder;
     }
     &::after {
-      background: linear-gradient(90deg, rgba(97, 97, 97, 0.75) 0%, rgba(97, 97, 97, 0) 94.39%);
+      background: linear-gradient(
+        90deg,
+        rgba(97, 97, 97, 0.75) 0%,
+        rgba(97, 97, 97, 0) 94.39%
+      );
       @extend %snsBorder;
     }
   }

@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+
+%inputText {
+  color: $gray6a;
+  font-size: rem(14.33);
+}
+
+select {
+  .notation & {
+    @extend %inputText;
+    padding: rem(15) 0;
+    border: none;
+  }
+  .email-address & {
+    @include background("ico_arrow_down_02.svg", right);
+    @extend %inputText;
+    appearance: none;
+    padding: rem(15) 0;
+    border: none;
+    width: 100%;
+  }
+}

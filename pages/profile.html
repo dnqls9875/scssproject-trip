@@ -16,22 +16,22 @@
         <div class="login-wrap__bottom">
           <div class="input-type1">
             <div class="input-group">
-              <label for="txt1" aria-label="유저이름">Name</label>
+              <label for="txt1">Name</label>
               <div class="input-wrap username">
                 <input type="text" placeholder="Username" id="txt1" />
               </div>
             </div>
             <div class="input-group">
-              <label for="num1" aria-label="유저핸드폰번호">Phone Number</label>
+              <label for="num1">Phone Number</label>
               <div class="input-wrap number">
                 <div class="notation">
                   <span class="notation__text">+91</span>
                 </div>
-                <input type="number" placeholder="Enter Phone Number" id="num1" />
+                <input type="tel" placeholder="Enter Phone Number" id="num1" />
               </div>
             </div>
             <div class="input-group">
-              <label for="email1" aria-label="유저이메일">Email Address</label>
+              <label for="email1">Email Address</label>
               <div class="input-wrap email">
                 <select name="email" id="email1">
                   <option value="Select" selected>Select</option>
@@ -41,7 +41,13 @@
               </div>
             </div>
           </div>
-          <button type="button" class="btn base primary" aria-label="Complete Profile">Complete Profile</button>
+          <button
+            type="button"
+            class="btn base primary"
+            aria-label="Complete Profile"
+          >
+            Complete Profile
+          </button>
         </div>
       </div>
     </main>

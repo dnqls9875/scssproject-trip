@@ -22,34 +22,27 @@
   input {
     @extend %inputText;
     border: none;
+    padding: rem(15) rem(20) rem(15) 0;
   }
   select {
-    @extend %inputText;
-    display: flex;
-    border: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    // @include background("ico_user.svg", center);
+    // appearance: none;
   }
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: rem(12);
 }
 
 .input-wrap {
   display: grid;
+  overflow: hidden;
   grid-template-columns: min-content 1fr;
   align-items: center;
   gap: rem(12);
-  padding: rem(15) rem(20);
   border-radius: rem(10);
   border: rem(1) solid $gray5c;
+  box-sizing: border-box;
 }
 
 .username {
+  padding-left: rem(20);
   &::before {
     @include background("ico_user.svg", center);
     @extend %inputIcon;
@@ -60,53 +53,47 @@
 
 .password {
   grid-template-columns: min-content 1fr min-content;
+  padding-left: rem(20);
+  padding-right: rem(20);
+  gap: 0;
   &::before {
     @include background("ico_key.svg", center);
     @extend %inputIcon;
     width: rem(18.39);
     height: rem(18.39);
-  }
-  &::after {
-    @include background("ico_mark.svg", center);
-    @extend %inputIcon;
-    width: rem(17.492);
-    height: rem(14.16);
+    margin-right: rem(19.97);
   }
 }
 
 .notation {
   display: flex;
+  position: relative;
+  align-items: center;
   gap: 0 rem(10);
+  height: rem(43);
+  padding-left: rem(20);
 
   &::after {
     @extend %inputIcon;
+    display: flex;
     border-right: 1px solid #6a6a6a;
     height: rem(21);
-  }
-  &__text {
-    display: flex;
-    align-items: center;
-    gap: rem(5);
-    color: $gray6a;
-    font-size: rem(14.33);
-    font-weight: 500;
-    white-space: nowrap;
-
-    &::after {
-      @include background("ico_arrow_down_01.svg", center);
-      @extend %inputIcon;
-      width: rem(8);
-      height: rem(4);
-    }
   }
 }
 
 .email {
-  grid-template-columns: 1fr min-content;
+  &.input-wrap {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .email-address {
+    padding: 0 rem(20);
+  }
+  // grid-template-columns: 1fr min-content;
   &::after {
-    @include background("ico_arrow_down_02.svg", center);
-    @extend %inputIcon;
-    width: rem(24);
-    height: rem(24);
+    // @include background("ico_arrow_down_02.svg", center);
+    // @extend %inputIcon;
+    // width: rem(24);
+    // height: rem(24);
   }
 }

@@ -1,0 +1,16 @@
+@use "../abstracts/" as *;
+
+%logoAlign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-type1 {
+  @extend %logoAlign;
+  padding-top: rem(75.8);
+}
+.logo-type2 {
+  @extend %logoAlign;
+  padding-top: rem(13.8);
+}

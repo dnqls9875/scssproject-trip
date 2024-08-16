@@ -20,3 +20,29 @@
     color: $white;
   }
 }
+
+.btn_prev {
+  @include background("ico_prev.svg", center);
+  .header & {
+    width: rem(20);
+    height: rem(20);
+  }
+}
+.btn_search {
+  @include background("ico_search.png", center);
+  .header & {
+    width: rem(14);
+    height: rem(14);
+  }
+}
+.btn_mark {
+  @include background("ico_mark.svg", center);
+  .input-type1 & {
+    width: rem(17.492);
+    height: rem(14.16);
+  }
+}
+
+.btn-type1 {
+  margin-top: rem(20);
+}
