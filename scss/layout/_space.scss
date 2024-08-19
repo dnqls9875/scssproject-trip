@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 
-$mt: (12, 20, 24, 30, 32, 34, 60, 63);
+$mt: (10, 12, 20, 24, 30, 32, 34, 60, 63);
 
 .px16 {
   padding-inline: rem(16);
@@ -8,8 +8,11 @@ $mt: (12, 20, 24, 30, 32, 34, 60, 63);
 .px25 {
   padding-inline: rem(25);
 }
-.mx25 {
-  margin-inline: rem(25);
+.px30 {
+  padding-inline: rem(30);
+}
+.mx30 {
+  margin-inline: rem(30);
 }
 
 @each $margin in $mt {

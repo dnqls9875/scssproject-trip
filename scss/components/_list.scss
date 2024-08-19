@@ -1,0 +1,52 @@
+@use "../abstracts/" as *;
+
+.list-type1 {
+  display: grid;
+  gap: rem(18);
+  @for $index from 1 through 8 {
+    &.col#{$index} {
+      grid-template-columns: repeat(#{$index}, 1fr);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    align-items: flex-start;
+    gap: 0.8rem;
+    border-radius: 1.0193rem;
+    background: #fff;
+    box-shadow: 0px 34.655px 9.513px 0px rgba(0, 32, 96, 0),
+      0px 21.745px 8.834px 0px rgba(0, 32, 96, 0),
+      0px 12.231px 7.475px 0px rgba(0, 32, 96, 0.01),
+      0px 5.436px 5.436px 0px rgba(0, 32, 96, 0.02),
+      0px 1.359px 2.718px 0px rgba(0, 32, 96, 0.02),
+      0px 0px 0px 0px rgba(0, 32, 96, 0.02);
+  }
+}
+
+.list-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.category {
+  color: $gray2f;
+  font-size: rem(12);
+  font-weight: 600;
+  line-height: 96%;
+}
+.price {
+  font-size: rem(9);
+  line-height: 96%;
+}
+.location {
+  display: flex;
+  align-content: center;
+  color: $grayb9;
+  font-size: rem(7.667);
+  line-height: 96%;
+  margin-top: rem(4.1);
+}
