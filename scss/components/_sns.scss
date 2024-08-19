@@ -8,13 +8,10 @@
 }
 
 .sns-type1 {
-  margin-top: rem(30);
-}
-
-.sns-wrap {
   display: flex;
   flex-direction: column;
   gap: rem(20);
+  // margin-top: rem(30);
 
   &--continue {
     display: flex;
@@ -45,7 +42,7 @@
       @extend %snsBorder;
     }
   }
-  &--list {
+  ul {
     display: flex;
     justify-content: center;
     align-items: center;

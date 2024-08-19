@@ -1,0 +1,67 @@
+@use "../abstracts/" as *;
+
+$formSettings: (
+  "height": rem(50),
+  "borderSetting": rem(1) solid $gray5c,
+  "borderRadius": rem(10),
+  "paddingInline": rem(20),
+  "fontColor": $gray6a,
+  "fontSize": rem(14.33),
+  "placeholderColor": $gray6a,
+  "disabledBgColor": rgba($gray6a, 0.1),
+  "readonlyBgColor": rgba($gray6a, 0.05),
+);
+// Select 디자인 정의
+$selectSetting: (
+  "bgUrl": "bg_select.svg",
+  "iconPosition": rem(20),
+  "bgWidth": 24,
+  "paddingInline": 20,
+);
+
+%label {
+  color: $gray09;
+  font-size: rem(14.33);
+  font-weight: 500;
+}
+
+%form {
+  height: map-get($formSettings, height);
+  border: map-get($formSettings, border);
+  box-sizing: border-box;
+  border-radius: map-get($formSettings, borderRadius);
+  padding-inline: map-get($formSettings, paddingInline);
+  color: map-get($formSettings, fontColor);
+  font-size: map-get($formSettings, fontSize);
+
+  &::placeholder {
+    color: map-get($formSettings, placeholderColor);
+  }
+  &:disabled {
+    background: map-get($formSettings, disabledBgColor);
+  }
+  &[readonly] {
+    background: map-get($formSettings, readonlyBgColor);
+  }
+}
+
+.input {
+  @extend %form;
+  width: 2.4rem;
+  width: var(--w, 100%);
+}
+
+.select {
+  //   $result: input의 좌측여백 * 2 + 이미지가로크기;
+
+  $result: map-get($selectSetting, paddingInline) * 2 +
+    map-get($selectSetting, bgWidth);
+  @extend %form;
+  @include background(
+    map-get($selectSetting, bgUrl),
+    right map-get($selectSetting, iconPosition) center
+  );
+  // padding-right: rem($result);
+  appearance: none;
+  width: var(--w, 100%);
+}

@@ -1,18 +1,18 @@
 @use "../abstracts/" as *;
 
-.profile-wrap {
+.profile-type1 {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   gap: rem(30);
   text-align: center;
-  padding-top: rem(63.8);
+  // padding-top: rem(63.8);
 }
 
 .profile-text {
   h2 {
-    color: $gray90;
+    color: $gray09;
     font-size: rem(25);
     font-weight: 600;
   }

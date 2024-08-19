@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>스타일가이드</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/guide.css" />
   </head>
   <body>
     <header class="header">
@@ -17,106 +18,153 @@
       </div>
     </header>
     <main>
-      <div class="logo-type1">
-        <img src="../images/logo_01.png" alt="GharrFor.Sale" />
-      </div>
-      <div class="logo-type2">
-        <img src="../images/logo_02.png" alt="GharrFor.Sale" />
-      </div>
-      <div class="login-wrap px25">
-        <h2 class="title">Sign In</h2>
-        <div class="input-type1">
-          <div class="input-group1">
-            <label for="txt1">Username</label>
-            <div class="input-wrap username">
-              <input type="text" placeholder="Username" id="txt1" />
-            </div>
+      <details name="guide">
+        <summary>기타 가이드</summary>
+        <div>
+          <h2>로고 가이드</h2>
+          <div class="logo-type1">
+            <img src="../images/logo_01.png" alt="GharrFor.Sale" />
           </div>
-          <div class="input-group1">
-            <label for="psw1">Password</label>
-            <div class="input-wrap password">
-              <input type="password" id="psw1" />
-              <button class="btn_mark" aria-label="미리보기"></button>
-            </div>
+          <div class="logo-type2">
+            <img src="../images/logo_02.png" alt="GharrFor.Sale" />
           </div>
-          <div class="input-group1">
-            <label for="email1">Email Address</label>
-            <div class="input-wrap username">
-              <input type="email" placeholder="Username" id="email1" />
-            </div>
-          </div>
-          <div class="input-group1">
-            <label for="txt1" aria-label="유저이름">Name</label>
-            <div class="input-wrap username">
-              <input type="text" placeholder="Username" id="txt1" />
-            </div>
-          </div>
-          <div class="input-group1">
-            <label for="num1">Phone Number</label>
-            <div class="input-wrap number">
-              <div class="notation">
-                <select name="tel" id="tel1">
-                  <option value="tel" selected>+91</option>
-                  <option value="tel">+91</option>
-                  <option value="tel">+91</option>
-                </select>
-              </div>
-              <input type="tel" placeholder="Enter Phone Number" id="num1" />
-            </div>
-          </div>
-          <div class="input-group1">
-            <label for="email2">Email Address</label>
-            <div class="input-wrap email">
-              <div class="email-address">
-                <select name="email" id="email2">
-                  <option value="email" selected>Select</option>
-                  <option value="email">Select</option>
-                  <option value="email">Select</option>
-                </select>
+        </div>
+      </details>
+
+      <details name="guide" open>
+        <summary>폼 가이드</summary>
+        <div>
+          <h2>폼 공통정의</h2>
+          input<input type="text" class="input" /><br />
+          <input type="text" class="input" value="value" /><br />
+          <input type="text" class="input" placeholder="placeholder" /><br />
+          disabled<input type="text" class="input" disabled /><br />
+          readonly<input type="text" class="input" readonly /><br />
+          <br />
+
+          <!-- <div class="input-type1">
+            <div class="input-group1">
+              <label for="txt1">Username</label>
+              <div class="input-wrap username">
+                <input type="text" placeholder="Username" id="txt1" />
               </div>
             </div>
+            <div class="input-group1">
+              <label for="psw1">Password</label>
+              <div class="input-wrap password">
+                <input type="password" id="psw1" />
+                <button class="btn_mark" aria-label="미리보기"></button>
+              </div>
+            </div>
+          </div> -->
+          <h2>Select 정의</h2>
+          <select name="" id="" class="select">
+            <option value="">Select</option>
+          </select>
+
+          <!-- <div class="input-type1">
+            <div class="input-group1">
+              <label for="txt1">Username</label>
+              <div class="input-wrap username">
+                <input type="text" placeholder="Username" id="txt1" />
+              </div>
+            </div>
+            <div class="input-group1">
+              <label for="psw1">Password</label>
+              <div class="input-wrap password">
+                <input type="password" id="psw1" />
+                <button class="btn_mark" aria-label="미리보기"></button>
+              </div>
+            </div>
+            <div class="input-group1">
+              <label for="email1">Email Address</label>
+              <div class="input-wrap username">
+                <input type="email" placeholder="Username" id="email1" />
+              </div>
+            </div>
+          </div> -->
+          <h2>폼 공통정의</h2>
+          <!-- <div class="input-type1">
+            <div class="input-group1">
+              <label for="txt1" aria-label="유저이름">Name</label>
+              <div class="input-wrap username">
+                <input type="text" placeholder="Username" id="txt1" />
+              </div>
+            </div>
+            <div class="input-group1">
+              <label for="num1">Phone Number</label>
+              <div class="input-wrap number">
+                <div class="notation">
+                  <select name="tel" id="tel1">
+                    <option value="tel" selected>+91</option>
+                    <option value="tel">+91</option>
+                    <option value="tel">+91</option>
+                  </select>
+                </div>
+                <input type="tel" placeholder="Enter Phone Number" id="num1" />
+              </div>
+            </div>
+            <div class="input-group1">
+              <label for="email2">Email Address</label>
+              <div class="input-wrap email">
+                <div class="email-address">
+                  <select name="email" id="email2">
+                    <option value="email" selected>Select</option>
+                    <option value="email">Select</option>
+                    <option value="email">Select</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </details>
+
+      <details name="guide">
+        <summary>SNS 가이드</summary>
+        <div>
+          <h2>SNS 공통 가이드</h2>
+          <div class="sns-type1">
+            <div class="sns-type1--continue">Or continue with</div>
+            <ul>
+              <li>
+                <a href="">
+                  <img src="../images/ico_google.svg" alt="구글" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="../images/ico_apple.svg" alt="애플" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="../images/ico_facebook.svg" alt="페이스북" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="btn-type1">
-          <button type="button" class="btn base primary">Sign in</button>
-        </div>
-      </div>
-      <div class="sns-type1 px25">
-        <div class="sns-wrap">
-          <div class="sns-wrap--continue">Or continue with</div>
-          <ul class="sns-wrap--list">
-            <li class="sns-wrap--list__item">
-              <a href="" class="sns-wrap--list__link">
-                <img src="../images/ico_google.svg" alt="구글" />
-              </a>
-            </li>
-            <li class="sns-wrap--list__item">
-              <a href="" class="sns-wrap--list__link">
-                <img src="../images/ico_apple.svg" alt="애플" />
-              </a>
-            </li>
-            <li class="sns-wrap--list__item">
-              <a href="" class="sns-wrap--list__link">
-                <img src="../images/ico_facebook.svg" alt="페이스북" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="profile-type1 px25">
-        <div class="profile-wrap">
-          <div class="profile-text">
-            <h2>Complete Your Profile</h2>
-            <p>
-              Don’t worry, only you ca see your personal<br />
-              data. No one else will be able to see it.
-            </p>
-          </div>
-          <div class="profile-image">
-            <img src="../images/@_profile.png" alt="프로필" />
+      </details>
+
+      <details name="guide">
+        <summary>프로필 가이드</summary>
+        <div>
+          <h2>프로필 공통 가이드</h2>
+          <div class="profile-type1">
+            <div class="profile-text">
+              <h2>Complete Your Profile</h2>
+              <p>
+                Don’t worry, only you ca see your personal<br />
+                data. No one else will be able to see it.
+              </p>
+            </div>
+            <div class="profile-image">
+              <img src="../images/@_profile.png" alt="프로필" />
+            </div>
           </div>
         </div>
-      </div>
+      </details>
     </main>
     <footer class="footer"></footer>
   </body>

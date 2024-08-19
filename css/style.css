@@ -296,7 +296,7 @@ body {
   padding: 0 2rem;
 }
 
-.sns-wrap--continue::after, .sns-wrap--continue::before {
+.sns-type1--continue::after, .sns-type1--continue::before {
   content: "";
   display: inline-block;
   width: 50%;
@@ -304,15 +304,11 @@ body {
 }
 
 .sns-type1 {
-  margin-top: 3rem;
-}
-
-.sns-wrap {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.sns-wrap--continue {
+.sns-type1--continue {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -324,13 +320,13 @@ body {
   text-align: center;
   white-space: nowrap;
 }
-.sns-wrap--continue::before {
+.sns-type1--continue::before {
   background: linear-gradient(270deg, rgba(97, 97, 97, 0.75) 0%, rgba(97, 97, 97, 0) 94.39%);
 }
-.sns-wrap--continue::after {
+.sns-type1--continue::after {
   background: linear-gradient(90deg, rgba(97, 97, 97, 0.75) 0%, rgba(97, 97, 97, 0) 94.39%);
 }
-.sns-wrap--list {
+.sns-type1 ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -344,13 +340,7 @@ body {
 }
 
 .logo-type1 {
-  padding-top: 7.58rem;
-  padding-bottom: 6rem;
-}
-
-.logo-type2 {
-  padding-top: 1.38rem;
-  padding-bottom: 2.5rem;
+  margin-top: 7.58rem;
 }
 
 .email-address select, .notation select {
@@ -370,14 +360,13 @@ body {
   width: 100%;
 }
 
-.profile-wrap {
+.profile-type1 {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   gap: 3rem;
   text-align: center;
-  padding-top: 6.38rem;
 }
 
 .profile-text h2 {
@@ -388,6 +377,35 @@ body {
 .profile-text p {
   color: #616161;
   font-size: 1.2rem;
+}
+
+.select, .input {
+  height: 5rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  padding-inline: 2rem;
+  color: #6a6a6a;
+  font-size: 1.433rem;
+}
+.select::placeholder, .input::placeholder {
+  color: #6a6a6a;
+}
+.select:disabled, .input:disabled {
+  background: rgba(106, 106, 106, 0.1);
+}
+[readonly].select, [readonly].input {
+  background: rgba(106, 106, 106, 0.05);
+}
+
+.input {
+  width: 2.4rem;
+  width: var(--w, 100%);
+}
+
+.select {
+  background: url(../images/bg_select.svg) no-repeat right 2rem center;
+  appearance: none;
+  width: var(--w, 100%);
 }
 
 .a11y-hidden {
@@ -409,6 +427,38 @@ body {
 
 .mx25 {
   margin-inline: 2.5rem;
+}
+
+.mt12 {
+  margin-top: 1.2rem;
+}
+
+.mt20 {
+  margin-top: 2rem;
+}
+
+.mt24 {
+  margin-top: 2.4rem;
+}
+
+.mt30 {
+  margin-top: 3rem;
+}
+
+.mt32 {
+  margin-top: 3.2rem;
+}
+
+.mt34 {
+  margin-top: 3.4rem;
+}
+
+.mt60 {
+  margin-top: 6rem;
+}
+
+.mt63 {
+  margin-top: 6.3rem;
 }
 
 .header {
