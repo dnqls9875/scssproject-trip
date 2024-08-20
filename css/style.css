@@ -556,6 +556,27 @@ body {
   color: #006eff;
 }
 
+.tab-type2 ul {
+  display: flex;
+  overflow: hidden;
+  gap: 1rem;
+}
+.tab-type2 button {
+  width: 100%;
+  padding: 0.9rem 1.8rem;
+  color: #242424;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 113%;
+  border-radius: 5rem;
+  background: #f4f6f9;
+}
+.tab-type2 button.--active {
+  background: #246bfd;
+  color: #fff;
+}
+
 .a11y-hidden {
   overflow: hidden;
   position: absolute;

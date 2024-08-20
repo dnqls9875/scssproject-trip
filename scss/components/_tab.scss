@@ -35,7 +35,31 @@
 
 .tab-type2 {
   ul {
+    // display: grid;
+    // grid-template-columns: min-content min-content min-content min-content;
+    display: flex;
+    overflow: hidden;
+    gap: rem(10);
   }
   li {
+  }
+  button {
+    $offColor: $gray24;
+    $onColor: $primary24;
+    $offTabColor: $grayf4;
+
+    width: 100%;
+    padding: rem(9) rem(18);
+    color: $offColor;
+    font-size: rem(13);
+    font-family: $font;
+    font-weight: 500;
+    line-height: 113%;
+    border-radius: rem(50);
+    background: $offTabColor;
+    &.--active {
+      background: $onColor;
+      color: $white;
+    }
   }
 }
