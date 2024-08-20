@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+
+.tab-type1 {
+  ul {
+    display: flex;
+  }
+  li {
+    flex: 1;
+  }
+  button {
+    $offColor: $gray30;
+    $onColor: $primary;
+    $offBottomColor: $primaryde;
+
+    width: 100%;
+    padding-block: rem(10);
+    color: $offColor;
+    font-size: rem(14);
+    font-family: $font;
+    font-weight: 500;
+    background-image: linear-gradient(
+      to bottom,
+      $offBottomColor,
+      $offBottomColor
+    );
+    background-repeat: no-repeat;
+    background-size: 100% rem(2);
+    background-position: bottom;
+    &.--active {
+      background-image: linear-gradient(to bottom, $onColor, $onColor);
+      color: $onColor;
+    }
+  }
+}
+
+.tab-type2 {
+  ul {
+  }
+  li {
+  }
+}

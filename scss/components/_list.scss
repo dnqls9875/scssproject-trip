@@ -3,11 +3,12 @@
 .list-type1 {
   display: grid;
   gap: rem(18);
-  @for $index from 1 through 8 {
-    &.col#{$index} {
-      grid-template-columns: repeat(#{$index}, 1fr);
-    }
-  }
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  // @for $index from 1 through 8 {
+  //   &.col#{$index} {
+  //     grid-template-columns: repeat(#{$index}, 1fr);
+  //   }
+  // }
 
   &__content {
     display: flex;
@@ -44,9 +45,30 @@
 }
 .location {
   display: flex;
-  align-content: center;
+  align-items: center;
+  gap: rem(3);
   color: $grayb9;
   font-size: rem(7.667);
   line-height: 96%;
   margin-top: rem(4.1);
+
+  &::before {
+    @include background("ico_spot.svg");
+    content: "";
+    width: rem(8);
+    height: rem(11);
+  }
+}
+.bookmark {
+  display: flex;
+  align-items: center;
+  &::after {
+    @include background("ico_bookmark.svg", center, $primarye5);
+    content: "";
+    display: inline-block;
+    width: rem(8);
+    height: rem(11);
+    padding: rem(6.2) rem(7.5);
+    border-radius: rem(8.5145);
+  }
 }
