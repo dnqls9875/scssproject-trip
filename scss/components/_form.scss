@@ -1,4 +1,5 @@
 @use "../abstracts/" as *;
+@use "sass:list";
 
 $formSettings: (
   "height": rem(50),
@@ -17,6 +18,17 @@ $selectSetting: (
   "iconPosition": rem(20),
   "bgWidth": 24,
   "paddingInline": 20,
+);
+$radioCheckSetting: (
+  1: (
+    "className": ".check-type1",
+    "offImage": "ico_bookmark_off.svg",
+    "onImage": "ico_bookmark_off.svg",
+    "width": rem(8),
+    "height": rem(11),
+    "padding": rem(6.2) rem(7.5),
+    "borderRadius": rem(8.5145),
+  ),
 );
 
 %label {
@@ -53,7 +65,6 @@ $selectSetting: (
 
 .select {
   //   $result: input의 좌측여백 * 2 + 이미지가로크기;
-
   $result: map-get($selectSetting, paddingInline) * 2 +
     map-get($selectSetting, bgWidth);
   @extend %form;
@@ -61,7 +72,33 @@ $selectSetting: (
     map-get($selectSetting, bgUrl),
     right map-get($selectSetting, iconPosition) center
   );
-  // padding-right: rem($result);
   appearance: none;
   width: var(--w, 100%);
+}
+
+@mixin Radio($mapName, $index) {
+  #{map-get($mapName, $index, className)} {
+    @include a11y-hidden;
+    + label {
+      @extend %label;
+
+      &::before {
+        @include background(map-get($mapName, $index, offImage));
+        content: "";
+        width: map-get($mapName, $index, width);
+        height: map-get($mapName, $index, height);
+      }
+    }
+    &:checked {
+      + label {
+        &::before {
+          @include background(map-get($mapName, $index, onImage));
+        }
+      }
+    }
+  }
+}
+
+@for $idx from 1 through list.length($radioCheckSetting) {
+  @include Radio($radioCheckSetting, $idx);
 }

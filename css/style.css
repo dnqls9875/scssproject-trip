@@ -427,6 +427,12 @@ body {
   font-size: 1.2rem;
 }
 
+.check-type1 + label {
+  color: #091130;
+  font-size: 1.433rem;
+  font-weight: 500;
+}
+
 .select, .input {
   height: 5rem;
   box-sizing: border-box;
@@ -454,6 +460,24 @@ body {
   background: url(../images/bg_select.svg) no-repeat right 2rem center;
   appearance: none;
   width: var(--w, 100%);
+}
+
+.check-type1 {
+  overflow: hidden;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.check-type1 + label::before {
+  background: url(../images/ico_bookmark_off.svg) no-repeat;
+  content: "";
+  width: 0.8rem;
+  height: 1.1rem;
+}
+.check-type1:checked + label::before {
+  background: url(../images/ico_bookmark_off.svg) no-repeat;
 }
 
 .list-type1 {
@@ -504,20 +528,6 @@ body {
   content: "";
   width: 0.8rem;
   height: 1.1rem;
-}
-
-.bookmark {
-  display: flex;
-  align-items: center;
-}
-.bookmark::after {
-  background: url(../images/ico_bookmark.svg) no-repeat center #e5f0ff;
-  content: "";
-  display: inline-block;
-  width: 0.8rem;
-  height: 1.1rem;
-  padding: 0.62rem 0.75rem;
-  border-radius: 0.85145rem;
 }
 
 .thumbnail {
