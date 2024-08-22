@@ -19,19 +19,23 @@ $selectSetting: (
   "bgWidth": 24,
   "paddingInline": 20,
 );
+// Radio, checkbox 디자인 정의
 $radioCheckSetting: (
   1: (
     "className": ".check-type1",
     "offImage": "ico_bookmark_off.svg",
-    "onImage": "ico_bookmark_off.svg",
+    "onImage": "ico_bookmark_on.svg",
     "width": rem(8),
     "height": rem(11),
-    "padding": rem(6.2) rem(7.5),
+    // "padding": rem(6.2) rem(7.5),
     "borderRadius": rem(8.5145),
+    "paddingInline": rem(7.5),
+    "paddingBlock": rem(6.2),
   ),
 );
 
 %label {
+  display: inline-flex;
   color: $gray09;
   font-size: rem(14.33);
   font-weight: 500;
@@ -81,6 +85,10 @@ $radioCheckSetting: (
     @include a11y-hidden;
     + label {
       @extend %label;
+      padding-inline: map-get($mapName, $index, paddingInline);
+      padding-block: map-get($mapName, $index, paddingBlock);
+      border-radius: map-get($mapName, $index, borderRadius);
+      background-color: $primarye5;
 
       &::before {
         @include background(map-get($mapName, $index, offImage));

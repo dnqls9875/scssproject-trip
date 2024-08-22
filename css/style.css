@@ -428,6 +428,7 @@ body {
 }
 
 .check-type1 + label {
+  display: inline-flex;
   color: #091130;
   font-size: 1.433rem;
   font-weight: 500;
@@ -470,6 +471,12 @@ body {
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
 }
+.check-type1 + label {
+  padding-inline: 0.75rem;
+  padding-block: 0.62rem;
+  border-radius: 0.85145rem;
+  background-color: #e5f0ff;
+}
 .check-type1 + label::before {
   background: url(../images/ico_bookmark_off.svg) no-repeat;
   content: "";
@@ -477,7 +484,7 @@ body {
   height: 1.1rem;
 }
 .check-type1:checked + label::before {
-  background: url(../images/ico_bookmark_off.svg) no-repeat;
+  background: url(../images/ico_bookmark_on.svg) no-repeat;
 }
 
 .list-type1 {
@@ -646,6 +653,14 @@ body {
 
 .mt63 {
   margin-top: 6.3rem;
+}
+
+.mx20 {
+  margin-inline: 2rem;
+}
+
+.mx30 {
+  margin-inline: 3rem;
 }
 
 .header {
