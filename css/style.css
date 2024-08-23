@@ -427,8 +427,9 @@ body {
   font-size: 1.2rem;
 }
 
-.check-type1 + label {
+.radio-type2 + label, .radio-type1 + label, .check-type1 + label {
   display: inline-flex;
+  align-items: center;
   color: #091130;
   font-size: 1.433rem;
   font-weight: 500;
@@ -438,7 +439,7 @@ body {
   height: 5rem;
   box-sizing: border-box;
   border-radius: 1rem;
-  padding-inline: 2rem;
+  padding-inline: 1.5rem;
   color: #6a6a6a;
   font-size: 1.433rem;
 }
@@ -463,6 +464,11 @@ body {
   width: var(--w, 100%);
 }
 
+.age {
+  display: flex;
+  gap: 1.3rem;
+}
+
 .check-type1 {
   overflow: hidden;
   position: absolute;
@@ -485,6 +491,42 @@ body {
 }
 .check-type1:checked + label::before {
   background: url(../images/ico_bookmark_on.svg) no-repeat;
+}
+
+.radio-type1 {
+  overflow: hidden;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.radio-type1 + label::before {
+  background: url(../images/ico_radio_01_off.svg) no-repeat;
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.radio-type1:checked + label::before {
+  background: url(../images/ico_radio_01_on.svg) no-repeat;
+}
+
+.radio-type2 {
+  overflow: hidden;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.radio-type2 + label::before {
+  background: url(../images/ico_radio_02_off.svg) no-repeat;
+  content: "";
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.radio-type2:checked + label::before {
+  background: url(../images/ico_radio_02_on.svg) no-repeat;
 }
 
 .list-type1 {

@@ -5,7 +5,7 @@ $formSettings: (
   "height": rem(50),
   "borderSetting": rem(1) solid $gray5c,
   "borderRadius": rem(10),
-  "paddingInline": rem(20),
+  "paddingInline": rem(15),
   "fontColor": $gray6a,
   "fontSize": rem(14.33),
   "placeholderColor": $gray6a,
@@ -27,20 +27,34 @@ $radioCheckSetting: (
     "onImage": "ico_bookmark_on.svg",
     "width": rem(8),
     "height": rem(11),
-    // "padding": rem(6.2) rem(7.5),
     "borderRadius": rem(8.5145),
     "paddingInline": rem(7.5),
     "paddingBlock": rem(6.2),
+    "bgColor": $primarye5,
+  ),
+  2: (
+    "className": ".radio-type1",
+    "offImage": "ico_radio_01_off.svg",
+    "onImage": "ico_radio_01_on.svg",
+    "width": rem(14),
+    "height": rem(14),
+  ),
+  3: (
+    "className": ".radio-type2",
+    "offImage": "ico_radio_02_off.svg",
+    "onImage": "ico_radio_02_on.svg",
+    "width": rem(17),
+    "height": rem(17),
   ),
 );
 
 %label {
   display: inline-flex;
+  align-items: center;
   color: $gray09;
   font-size: rem(14.33);
   font-weight: 500;
 }
-
 %form {
   height: map-get($formSettings, height);
   border: map-get($formSettings, border);
@@ -66,7 +80,6 @@ $radioCheckSetting: (
   width: 2.4rem;
   width: var(--w, 100%);
 }
-
 .select {
   //   $result: input의 좌측여백 * 2 + 이미지가로크기;
   $result: map-get($selectSetting, paddingInline) * 2 +
@@ -79,6 +92,10 @@ $radioCheckSetting: (
   appearance: none;
   width: var(--w, 100%);
 }
+.age {
+  display: flex;
+  gap: rem(13);
+}
 
 @mixin Radio($mapName, $index) {
   #{map-get($mapName, $index, className)} {
@@ -88,7 +105,7 @@ $radioCheckSetting: (
       padding-inline: map-get($mapName, $index, paddingInline);
       padding-block: map-get($mapName, $index, paddingBlock);
       border-radius: map-get($mapName, $index, borderRadius);
-      background-color: $primarye5;
+      background-color: map-get($mapName, $index, bgColor);
 
       &::before {
         @include background(map-get($mapName, $index, offImage));
