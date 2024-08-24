@@ -82,8 +82,7 @@ $radioCheckSetting: (
 }
 .select {
   //   $result: input의 좌측여백 * 2 + 이미지가로크기;
-  $result: map-get($selectSetting, paddingInline) * 2 +
-    map-get($selectSetting, bgWidth);
+  $result: map-get($selectSetting, paddingInline) * 2 + map-get($selectSetting, bgWidth);
   @extend %form;
   @include background(
     map-get($selectSetting, bgUrl),
@@ -109,6 +108,7 @@ $radioCheckSetting: (
 
       &::before {
         @include background(map-get($mapName, $index, offImage));
+        background-size: contain;
         content: "";
         width: map-get($mapName, $index, width);
         height: map-get($mapName, $index, height);
