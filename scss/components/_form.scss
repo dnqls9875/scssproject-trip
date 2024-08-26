@@ -33,13 +33,20 @@ $radioCheckSetting: (
     "bgColor": $primarye5,
   ),
   2: (
+    "className": ".check-type2",
+    "offImage": "ico_like_off.png",
+    "onImage": "ico_like_on.png",
+    "width": rem(40),
+    "height": rem(40),
+  ),
+  3: (
     "className": ".radio-type1",
     "offImage": "ico_radio_01_off.svg",
     "onImage": "ico_radio_01_on.svg",
     "width": rem(14),
     "height": rem(14),
   ),
-  3: (
+  4: (
     "className": ".radio-type2",
     "offImage": "ico_radio_02_off.svg",
     "onImage": "ico_radio_02_on.svg",
@@ -54,6 +61,7 @@ $radioCheckSetting: (
   color: $gray09;
   font-size: rem(14.33);
   font-weight: 500;
+  cursor: pointer;
 }
 %form {
   height: map-get($formSettings, height);
@@ -82,7 +90,8 @@ $radioCheckSetting: (
 }
 .select {
   //   $result: input의 좌측여백 * 2 + 이미지가로크기;
-  $result: map-get($selectSetting, paddingInline) * 2 + map-get($selectSetting, bgWidth);
+  $result: map-get($selectSetting, paddingInline) * 2 +
+    map-get($selectSetting, bgWidth);
   @extend %form;
   @include background(
     map-get($selectSetting, bgUrl),
@@ -108,8 +117,8 @@ $radioCheckSetting: (
 
       &::before {
         @include background(map-get($mapName, $index, offImage));
-        background-size: contain;
         content: "";
+        background-size: contain;
         width: map-get($mapName, $index, width);
         height: map-get($mapName, $index, height);
       }

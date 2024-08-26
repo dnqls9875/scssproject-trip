@@ -1,23 +1,104 @@
+@use "sass:list";
 @use "../abstracts/" as *;
+
+$buttonSize: (
+  1: (
+    "className": ".base",
+    "height": 46,
+    "fontSize": 17,
+    "paddingInline": 40,
+    "borderWidth": 1,
+    "fontWeight": 600,
+  ),
+);
+$buttonColor: (
+  1: (
+    "className": ".blue",
+    "bgColor": $primary,
+    "color": $white,
+    "borderColor": $primary,
+  ),
+  2: (
+    "className": ".white",
+    "bgColor": $white,
+    "color": $primary,
+    "borderColor": $white,
+  ),
+);
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 
-  &.base {
+  &.fullsize {
     width: 100%;
-    font-family: $font;
-    padding: rem(15) 0;
-    font-size: rem(17);
-    font-weight: 600;
-    line-height: 96%;
-    text-align: center;
-    border-radius: rem(70);
   }
-  &.primary {
-    background: $primary;
-    color: $white;
+
+  // &.base {
+  //   width: 100%;
+  //   font-family: $font;
+  //   padding: rem(15) 0;
+  //   font-size: rem(17);
+  //   font-weight: 600;
+  //   line-height: 96%;
+  //   text-align: center;
+  //   border-radius: rem(70);
+  // }
+
+  // &.primary {
+  //   background: $primary;
+  //   color: $white;
+  // }
+}
+
+// @mixin buttonSize {
+//   //     height: rem(40);
+//   //     font-size: rem(16);
+//   //     padding-inline: rem(25);
+//   //     border: rem(1) solid;
+// }
+
+// 순서 못 외우는 이슈
+// @mixin buttonSize($height, $fs, $padding, $border, $fw) {
+//   &.base {
+//     height: $height;
+//     font-size: $fs;
+//     padding-inline: $padding;
+//     border: $border solid;
+//     font-weight: $fw;
+//   }
+// }
+// @include buttonSize(rem(40), rem(17), rem(13.3), rem(1), 400);
+
+@mixin buttonSize($varName, $index) {
+  &#{map-get($varName, $index, className)} {
+    height: rem(map-get($varName, $index, height));
+    font-size: rem(map-get($varName, $index, fontSize));
+    padding-inline: rem(map-get($varName, $index, paddingInline));
+    border: rem(map-get($varName, $index, borderWidth)) solid;
+    font-weight: map-get($varName, $index, fontWeight);
+  }
+}
+
+.btn {
+  @for $index from 1 through list.length($buttonSize) {
+    @include buttonSize($buttonSize, $index);
+  }
+}
+
+@mixin buttonColor($varName, $index) {
+  &#{map-get($varName, $index, className)} {
+    background-color: map-get($varName, $index, bgColor);
+    color: map-get($varName, $index, color);
+    border-color: map-get($varName, $index, borderColor);
+  }
+}
+
+.btn {
+  @for $index from 1 through list.length($buttonColor) {
+    @include buttonColor($buttonColor, $index);
   }
 }
 
@@ -26,6 +107,11 @@
   .header & {
     width: rem(20);
     height: rem(20);
+  }
+  .header-icon & {
+    width: rem(40);
+    height: rem(40);
+    @include background("ico_prev_02.png", center);
   }
 }
 .btn_search {
@@ -40,5 +126,19 @@
   .input-type1 & {
     width: rem(17.492);
     height: rem(14.16);
+  }
+}
+
+.btn_share {
+  @include background("ico_share.png", center);
+  .header-icon & {
+    width: rem(40);
+    height: rem(40);
+  }
+}
+.btn_like {
+  .header-icon & {
+    width: rem(40);
+    height: rem(40);
   }
 }

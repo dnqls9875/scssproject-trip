@@ -25,3 +25,26 @@
     justify-self: end;
   }
 }
+
+.header-icon {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  height: rem(40);
+
+  &__left {
+    height: rem(40);
+  }
+  &__right {
+    display: flex;
+    gap: rem(10);
+    justify-self: end;
+  }
+
+  .visual-type1 & {
+    position: absolute;
+    top: rem(35);
+    right: rem(20);
+    left: rem(20);
+  }
+}

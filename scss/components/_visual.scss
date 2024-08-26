@@ -1,0 +1,13 @@
+@use "../abstracts/" as *;
+
+.visual-type1 {
+  position: relative;
+}
+
+.visual-img {
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}

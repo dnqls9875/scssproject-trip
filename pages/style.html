@@ -28,10 +28,27 @@
           <div class="logo-type2">
             <img src="../images/logo_02.png" alt="GharrFor.Sale" />
           </div>
+          <h2>하단 고정 레이아웃</h2>
+          <div class="fix-bottom btn base blue rounded55">
+            <button>버튼</button>
+          </div>
+          <h2>헤더 아이콘 유형</h2>
+          <div class="header-icon">
+            <div class="header-icon__left">
+              <button class="btn_prev" aria-label="이전으로"></button>
+            </div>
+            <div class="header-icon__right">
+              <button class="btn_share" aria-label="공유"></button>
+              <div class="btn_like">
+                <input type="checkbox" class="check-type2" id="check1_4" />
+                <label for="check1_4"></label>
+              </div>
+            </div>
+          </div>
         </div>
       </details>
 
-      <details name="guide" open>
+      <details name="guide">
         <summary>폼 가이드</summary>
         <div>
           <h2>폼 공통정의</h2>
@@ -122,7 +139,11 @@
                       <option value="tel">+91</option>
                     </select>
                   </div>
-                  <input type="tel" placeholder="Enter Phone Number" id="num1" />
+                  <input
+                    type="tel"
+                    placeholder="Enter Phone Number"
+                    id="num1"
+                  />
                 </div>
               </div>
               <div class="input-group1">
@@ -277,6 +298,73 @@
               <li><button>Apartment</button></li>
             </ul>
           </nav>
+        </div>
+      </details>
+
+      <details name="guide">
+        <summary>버튼 가이드</summary>
+        <div>
+          <!-- 
+            다중클래스 버튼 구분 
+            공통클래스
+              .btn : 버튼 전체의 공통 속성
+              box-sizing, inline-flex, align-items, gap  
+              gap은 통일하는게 좋다.
+
+            ----------------------------------------------------  
+            크기
+              .btn.base / .btn.sm / .btn.xl / .btn.xs
+              높이,글씨크기, 좌우여백, 외곽선굵기
+            
+            ----------------------------------------------------
+
+            색상
+              .btn.blue / .btn.white / .btn.gray
+              배경색, 글씨색, 외곽선색
+              
+            ---------------------------------------------------- 
+          
+            추가옵션
+              좌우크기(width:100%) : fullsize
+              모서리둥글기(border-radius) : rounded10 / fullsize 
+          -->
+          <h2>버튼크기</h2>
+          <button class="btn base">텍스트</button>
+          <h2>버튼색상</h2>
+          <button class="btn base blue">.blue</button>
+          <button class="btn base white">.white</button>
+          <h2>모서리 둥글기</h2>
+          <button class="btn base blue rounded55">.blue</button>
+          <h2>버튼 예시</h2>
+        </div>
+      </details>
+
+      <details name="guide" open>
+        <summary>비주얼 가이드</summary>
+        <div>
+          <h2>visual-type1</h2>
+          <div class="visual-type1">
+            <div class="visual-img">
+              <img src="../images/visual_01.png" alt="" />
+            </div>
+            <div class="header-icon">
+              <div class="header-icon__left">
+                <button class="btn_prev" aria-label="이전으로"></button>
+              </div>
+              <div class="header-icon__right">
+                <button class="btn_share" aria-label="공유"></button>
+                <div class="btn_like">
+                  <input
+                    type="checkbox"
+                    class="check-type2"
+                    id="check1_5"
+                    checked
+                  />
+                  <label for="check1_5"></label>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </details>
     </main>
