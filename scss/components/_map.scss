@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+
+.map {
+  position: relative;
+
+  &-bg {
+    img {
+      width: 100%;
+    }
+  }
+  &-logo {
+    position: absolute;
+    top: calc(rem(91) / rem(201) * 100%);
+    left: calc(rem(150) / rem(340) * 100%);
+    width: rem(29);
+    height: rem(37);
+  }
+}

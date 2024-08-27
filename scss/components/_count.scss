@@ -1,0 +1,32 @@
+@use "../abstracts/" as *;
+
+%commonCount {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(2);
+
+  &::before {
+    content: "";
+    width: rem(18);
+    aspect-ratio: 1;
+  }
+}
+
+.like-wrap {
+  display: flex;
+  gap: rem(11);
+  font-weight: 400;
+}
+
+.like-count {
+  @extend %commonCount;
+  &::before {
+    @include background("ico_like.svg");
+  }
+}
+.dislike-count {
+  @extend %commonCount;
+  &::before {
+    @include background("ico_dislike.svg");
+  }
+}

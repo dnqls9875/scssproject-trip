@@ -4,11 +4,6 @@
   display: grid;
   gap: rem(18);
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  // @for $index from 1 through 8 {
-  //   &.col#{$index} {
-  //     grid-template-columns: repeat(#{$index}, 1fr);
-  //   }
-  // }
 
   &__content {
     display: flex;
@@ -58,4 +53,57 @@
     width: rem(8);
     height: rem(11);
   }
+}
+
+.list-type2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: rem(10);
+}
+
+.list-type3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: rem(15) rem(10);
+  &__content {
+    gap: rem(5);
+  }
+}
+
+.list-type--icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(3);
+  padding-block: rem(10);
+  border-radius: rem(12);
+  box-shadow: 0px 52px 14px 0px rgba(0, 0, 0, 0),
+    0px 33px 13px 0px rgba(0, 0, 0, 0.01), 0px 19px 11px 0px rgba(0, 0, 0, 0.03),
+    0px 8px 8px 0px rgba(0, 0, 0, 0.04), 0px 2px 5px 0px rgba(0, 0, 0, 0.05),
+    0px 0px 0px 0px rgba(0, 0, 0, 0.05);
+  background: $white;
+
+  .list-type3 & {
+    gap: rem(5);
+  }
+}
+
+.list-type4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: rem(10);
+  padding: rem(4.3);
+
+  img {
+    width: 100%;
+  }
+}
+.list-type5 {
+  display: flex;
+  align-items: flex-start;
+  gap: rem(7);
 }

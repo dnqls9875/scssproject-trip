@@ -3,11 +3,41 @@
 .visual-type1 {
   position: relative;
 }
+.visual-type2 {
+  position: relative;
+}
 
 .visual-img {
   img {
     display: block;
     width: 100%;
     object-fit: cover;
+  }
+}
+
+.visual-thumbnail {
+  position: absolute;
+  right: rem(52.4);
+  bottom: rem(19);
+  left: rem(30);
+  .visual-type2 & {
+    &--list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: center;
+      gap: rem(4.3);
+      padding: rem(4.3);
+      background: $white;
+      border-radius: rem(5.4);
+
+      &__item {
+        @for $index from 1 through 5 {
+          &:nth-of-type(#{$index}) {
+            @include background("@_visual_thumbnail#{$index}.png");
+            background-size: contain;
+          }
+        }
+      }
+    }
   }
 }

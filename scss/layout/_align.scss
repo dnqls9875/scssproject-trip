@@ -50,10 +50,12 @@
 
 .fix-bottom {
   @include position(f, left, 0, bottom, 0);
-
   width: 100%;
   box-sizing: border-box;
-  padding: rem(15) rem(40);
+  padding: rem(15) rem(20);
+  border-radius: rem(10) rem(10) 0rem 0rem;
+  border-top: rem(1) solid rgba(0, 0, 0, 0.1);
+  background: $white;
 }
 
 body {

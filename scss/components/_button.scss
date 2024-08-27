@@ -31,6 +31,7 @@ $buttonColor: (
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  font-family: $fontPo;
 
   &.fullsize {
     width: 100%;
@@ -128,17 +129,30 @@ $buttonColor: (
     height: rem(14.16);
   }
 }
-
 .btn_share {
   @include background("ico_share.png", center);
   .header-icon & {
     width: rem(40);
-    height: rem(40);
+    aspect-ratio: 1;
   }
 }
 .btn_like {
   .header-icon & {
     width: rem(40);
-    height: rem(40);
+    aspect-ratio: 1;
+  }
+}
+.btn_mail {
+  @include background("ico_mail.svg", center);
+  .profile-type2 & {
+    width: rem(24);
+    aspect-ratio: 1;
+  }
+}
+.btn_tel {
+  @include background("ico_tel.svg", center);
+  .profile-type2 & {
+    width: rem(24);
+    aspect-ratio: 1;
   }
 }
