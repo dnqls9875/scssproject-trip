@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 
-$round: 55, "-full";
+$round: 50, 55, "-full";
 
 .rounded {
   @each $size in $round {

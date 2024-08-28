@@ -8,11 +8,14 @@
     flex: 1;
   }
   button {
+    width: 100%;
+  }
+
+  button {
     $offColor: $gray30;
     $onColor: $primary;
     $offBottomColor: $primaryde;
 
-    width: 100%;
     padding-block: rem(10);
     color: $offColor;
     font-size: rem(14);
@@ -35,8 +38,8 @@
 
 .tab-type2 {
   ul {
+    overflow: auto;
     display: flex;
-    overflow-x: auto;
     gap: rem(10);
   }
   button {
@@ -57,5 +60,89 @@
       background: $onColor;
       color: $white;
     }
+  }
+}
+
+.tab-type3 {
+  ul {
+    overflow: auto;
+    display: flex;
+    gap: rem(9);
+  }
+
+  button {
+    $offColor: $gray24;
+    $onColor: $primary24;
+    $offTabColor: $grayf4;
+    width: 100%;
+    white-space: nowrap;
+    color: $offColor;
+    font-family: $fontPo;
+    font-weight: 500;
+    text-align: center;
+    border-radius: rem(50);
+    background: $offTabColor;
+    &.--active {
+      background: $onColor;
+      color: $white;
+    }
+  }
+  .depth1 {
+    button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: rem(8) rem(25);
+      font-size: rem(11);
+    }
+    span {
+      line-height: 115%;
+    }
+  }
+  .depth2 {
+    button {
+      padding: rem(10) rem(18);
+      font-size: rem(15);
+      line-height: 113%;
+    }
+  }
+}
+
+.tab-type4 {
+  ul {
+    overflow: auto;
+    display: flex;
+    gap: rem(9);
+  }
+  button {
+    $offColor: $gray24;
+    $onColor: $primary24;
+    $offTabColor: $grayf4;
+    width: 100%;
+    color: $offColor;
+    font-family: $fontPo;
+    font-size: rem(15);
+    font-weight: 500;
+    line-height: 113%;
+    text-align: center;
+    padding: rem(10) rem(18);
+    border-radius: rem(50);
+    background: $offTabColor;
+
+    &.--active {
+      background: $onColor;
+      color: $white;
+    }
+  }
+}
+
+.day {
+  .tab-type3 & {
+    font-weight: 400;
+  }
+}
+.month {
+  .tab-type3 & {
+    font-size: rem(15);
   }
 }

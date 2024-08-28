@@ -38,6 +38,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   text-align: center;
+  padding: rem(10) 0 rem(15);
 
   &__left {
     display: grid;

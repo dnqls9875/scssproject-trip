@@ -94,9 +94,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   gap: rem(10);
   padding: rem(4.3);
+  margin-bottom: rem(20);
 
   img {
     width: 100%;

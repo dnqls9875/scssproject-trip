@@ -24,26 +24,9 @@
 }
 
 .ratings {
-  display: grid;
-  grid-template-columns: rem(150) 1fr;
-  gap: rem(70);
-  &__left {
-    @extend %rating;
-    font-weight: 500;
-    &::before {
-      @include background("ico_rating_full.png", center);
-      width: rem(104);
-    }
-  }
-  &__right {
-    display: grid;
-    grid-template-columns: rem(49) rem(60.4);
-    gap: rem(5);
-    justify-self: end;
-    color: #323232;
-    font-family: $fontPo;
-    font-size: rem(12);
-    font-weight: 500;
-    line-height: rem(19);
-  }
+  @include background("bg_ratings.png");
+  padding-left: rem(135);
+  color: $gray2a;
+  font-size: rem(13);
+  font-weight: 500;
 }
